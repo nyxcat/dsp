@@ -34,7 +34,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls: list directory
+    ls -a: display all files
+    ls -l: display the long format listing
+    ls -lh: display the files with human readable sizes in long format
+    ls -lah: display all the files with human readable sizes in long format
+    ls -t: dispaly the files from newest to oldest
+    ls -Glp: display file list with different colors for different file types, show long formating listing and dispaly directories with /.
 
 ---
 
