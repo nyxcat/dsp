@@ -19,20 +19,30 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > pwd: show current working directory
+> > 
+    pwd: show current working directory
+    
     mkdir: create a directory
+    
     rmdir: delete a directory
+    
     touch: create a file using 'touch' command
+    
     rm: delete a file
+    
     mv: rename a file
+    
     ls -a: list hidden files
+    
     cp: copy a file from one directory to another
+    
     cat: print the whole file
+    
     find: find files
+    
     echo: print some arguments
+    
     cd: change directory
-    
-    
 
 ---
 
@@ -47,7 +57,9 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > ls: list directory
+> > 
+
+ls: list directory
 
 ls -a: display all files
     
@@ -67,11 +79,17 @@ ls -Glp: display file list with different colors for different file types, show 
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > ls -a: display all files
-    ls -t: display files from newest to oldest
-    ls -u: display files by the file access time
-    ls -r: display files in reverse order
-    ls -l: display long formating list
+> > 
+
+ls -a: display all files
+    
+ls -t: display files from newest to oldest
+
+ls -u: display files by the file access time
+
+ls -r: display files in reverse order
+
+ls -l: display long formating list
 
 ---
 
@@ -79,10 +97,15 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > 'xargs' exacutes arguments. For example, if I want to print multiple words with two words in a line, I can do as follwoing.
+> > 
+'xargs' exacutes arguments. For example, if I want to print multiple words with two words in a line, I can do as follwoing.
+
 $ echo "hello world hello world" | xargs -n2
+
 Then I will get:
+
 hello world
+
 hello world
 
 
