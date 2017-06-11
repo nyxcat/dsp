@@ -19,7 +19,20 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > pwd: show current working directory
+    mkdir: create a directory
+    rmdir: delete a directory
+    touch: create a file using 'touch' command
+    rm: delete a file
+    mv: rename a file
+    ls -a: list hidden files
+    cp: copy a file from one directory to another
+    cat: print the whole file
+    find: find files
+    echo: print some arguments
+    cd: change directory
+    
+    
 
 ---
 
@@ -36,17 +49,17 @@ What do the following commands do:
 
 > > ls: list directory
 
-    ls -a: display all files
+ls -a: display all files
     
-    ls -l: display the long format listing
+ls -l: display the long format listing
     
-    ls -lh: display the files with human readable sizes in long format
+ls -lh: display the files with human readable sizes in long format
     
-    ls -lah: display all the files with human readable sizes in long format
+ls -lah: display all the files with human readable sizes in long format
     
-    ls -t: dispaly the files from newest to oldest
+ls -t: display the files from newest to oldest
     
-    ls -Glp: display file list with different colors for different file types, show long formating listing and dispaly directories with /.
+ls -Glp: display file list with different colors for different file types, show long formating listing and dispaly directories with /.
 
 ---
 
@@ -54,7 +67,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -a: display all files
+    ls -t: display files from newest to oldest
+    ls -u: display files by the file access time
+    ls -r: display files in reverse order
+    ls -l: display long formating list
 
 ---
 
@@ -62,7 +79,12 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 'xargs' exacutes arguments. For example, if I want to print multiple words with two words in a line, I can do as follwoing.
+$ echo "hello world hello world" | xargs -n2
+Then I will get:
+hello world
+hello world
+
 
  
 
