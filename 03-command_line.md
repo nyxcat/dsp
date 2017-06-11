@@ -105,7 +105,6 @@ $ echo "hello world hello world" | xargs -n2
 Then I will get:
 
 hello world
-
 hello world
 
 
