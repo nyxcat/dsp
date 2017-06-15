@@ -18,7 +18,8 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    s = 'Number of donuts: %i' %count if count < 10 else 'Number of donuts: many'
+    return s
 
 
 def both_ends(s):
@@ -37,7 +38,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) < 2:
+        return ''
+    else:
+        return s[0]+s[1]+s[len(s)-2]+s[len(s)-1]
 
 
 def fix_start(s):
@@ -56,7 +60,12 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    if len(s) < 1:
+        return s
+    new_s = s[0]
+    for i in s[1:]:
+        new_s += '*' if i == s[0] else i
+    return new_s
 
 
 def mix_up(a, b):
@@ -74,7 +83,7 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    return b[0:2]+a[2:]+' '+a[0:2]+b[2:]
 
 
 def verbing(s):
@@ -91,7 +100,10 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) < 4:
+        return s
+    else:
+        return s+'ing' if s[len(s)-3:] != 'ing' else s+'ly'
 
 
 def not_bad(s):
@@ -111,7 +123,16 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    if len(s) >= 6:
+        for i in range(0,len(s)-5):
+            if s[i:i+3] == 'not':
+                for j in range(i+3,len(s)-2):
+                    if s[j:j+3] == 'not':
+                        i = j
+                    if s[j:j+3] == 'bad':
+                        return s[:i] + 'good' + s[j+3:]
+                return s
+    return s
 
 
 def front_back(a, b):
@@ -130,4 +151,4 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    return a[0:int((len(a)+1)/2)] + b[0:int((len(b)+1)/2)]+a[int((len(a)+1)/2):]+b[int((len(b)+1)/2):]
