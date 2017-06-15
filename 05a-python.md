@@ -37,6 +37,7 @@ Example of creating a set:
 Weekday is a set with 7 elements since Mon and Tue are both repeated.
 
 Looking for an element in sets will be much faster than that in lists because a find operation in sets is O(1) while a find operation in lists is O(n).
+
 ---
 
 ### Q3. Lambda Function
