@@ -15,7 +15,12 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    count = 0
+    for i in words:
+        if len(i) > 1:
+            if i[0] == i[len(i)-1]:
+                count += 1
+    return count
 
 
 def front_x(words):
@@ -32,7 +37,17 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    begin_x = []
+    not_x = []
+    for i in words:
+        if (len(i) > 0):
+            if i[0] == 'x':
+                begin_x.append(i)
+            else:
+                not_x.append(i)
+        else:
+            not_x.append(i)
+    return sorted(begin_x) + sorted(not_x)
 
 
 def sort_last(tuples):
@@ -49,7 +64,7 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    return sorted(tuples,key = lambda x: x[-1])
 
 
 def remove_adjacent(nums):
@@ -68,7 +83,16 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    if len(nums) < 2:
+        return nums
+    i = 1
+    while i < len(nums):
+        while (nums[i] == nums[i-1]):
+            nums.pop(i)
+            if i >= len(nums):
+                break
+        i += 1
+    return nums
 
 
 def linear_merge(list1, list2):
@@ -85,4 +109,17 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    i1 = 0
+    i2 = 0
+    while ((i1 < len(list1)) & (i2 < len(list2))):
+        while list2[i2] <= list1[i1]:
+            list1.insert(i1, list2[i2])
+            i2 += 1
+            if i2 == len(list2):
+                return list1
+        while list2[i2] > list1[i1]:
+            i1 += 1
+            if i1 == len(list1):
+                break
+    list1 = list1 + list2[i2:]
+    return list1
