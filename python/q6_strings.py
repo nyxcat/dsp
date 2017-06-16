@@ -123,16 +123,12 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    if len(s) >= 6:
-        for i in range(0,len(s)-5):
-            if s[i:i+3] == 'not':
-                for j in range(i+3,len(s)-2):
-                    if s[j:j+3] == 'not':
-                        i = j
-                    if s[j:j+3] == 'bad':
-                        return s[:i] + 'good' + s[j+3:]
-                return s
-    return s
+    index_not = s.find('not')
+    index_bad = s.find('bad')
+    if index_not < index_bad:
+        return s[:index_not] + 'good' + s[index_bad+3:]
+    else:
+        return s
 
 
 def front_back(a, b):
