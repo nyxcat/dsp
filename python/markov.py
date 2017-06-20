@@ -39,7 +39,7 @@ with open(filename) as txtfile:
             beginfrequency[beginword] += 1
         else:
             beginfrequency[beginword] = 1
-    words = re.split('\n| |\"|\'',text)
+    words = re.split('\n| ',text)
     for i, word in enumerate(words):
         if word == '':
             words.pop(i)
