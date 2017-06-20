@@ -94,12 +94,12 @@ def thirdwordfrequency(filename):
             thirdfrequency[word][nextword] = num/totalnum
     return thirdfrequency    
 
-
 def main(filename, wordnum):
     pseudotext = ''
 
     if wordnum == 0:
         return pseudotext
+    
     bwfre = beginwordfrequency(filename)
     
     firstword = np.random.choice(list(bwfre.keys()), p = list(bwfre.values()))
@@ -112,7 +112,6 @@ def main(filename, wordnum):
     
     secondword = np.random.choice(
         list(swfre[firstword].keys()), p = list(swfre[firstword].values()))
-
     pseudotext = pseudotext + ' ' + secondword
 
     if wordnum == 2:
